@@ -1,16 +1,36 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import js from '@eslint/js'
+import { FlatCompat } from '@eslint/eslintrc'
 
 const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+  // import.meta.dirname is available after Node.js v20.11.0
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+})
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-];
+  ...compat.config({
+    extends: [
+      'eslint:recommended',
+      'next',
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+    ],
+  }),
+  {
+  files: ["**/*.ts", "**/*.tsx"] ,
+    rules: {
+      "semi": "off",
+      "@typescript-eslint/no-empty-interface": [
+          "error",
+        {
+          allowSingleExtends: true
+        }
+      ],
+      "@typescript-eslint/no-unused-vars": ["warn"]
+    },
+  },
 
-export default eslintConfig;
+]
+
+export default eslintConfig
