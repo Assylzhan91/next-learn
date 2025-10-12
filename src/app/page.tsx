@@ -1,6 +1,6 @@
 import React, {JSX} from "react";
 
-const a = 1;
+
 export default function Home(): JSX.Element {
   return (
     <div>

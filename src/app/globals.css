@@ -1,15 +1,8 @@
-@import "tailwindcss";
+@import url("tailwindcss");
 
 :root {
-  --background: #ffffff;
+  --background: #fff;
   --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,5 +13,43 @@
 }
 
 body {
+  display: flex;
+  pointer-events: all;
+  color: var(--foreground);
+  background-color: var(--background);
+}
 
+.header {
+  margin: 10px;
+  padding: .5rem;
+  color: #fff;
+}
+
+.footer-link {
+  background-color: #a3a3a3;
+  font-size: 16px;
+}
+
+.container {
+  padding: 20px; /* Ошибка: unit-case (PX) + indentation (4 пробела) */
+  background-color: #fafafa; /* Ошибка: color-hex-case (FAFAFA) */
+}
+
+.main-content {
+  margin: .8em;
+  color: #ccc;
+}
+
+.sidebar {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.profile-card {
+  width: 300px; height: 100vh;
+  line-height: 1.5;
+}
+
+.item-list {
+  width: calc(100% - 20px);
 }

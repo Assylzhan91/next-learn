@@ -1,12 +1,12 @@
 /** @type {import('stylelint').Config} */
 export default {
-    extends: ["stylelint-config-standard"],
-    plugins: ['stylelint-order'],
+    "extends": ["stylelint-config-standard"],
+    plugins: ['stylelint-order', '@stylistic/stylelint-plugin'],
     rules: {
-        "block-no-empty": true,
-        "textIndent": 4,
-        "color-no-invalid-hex": true,
-
+        "@stylistic/indentation": 2,
+        "@stylistic/color-hex-case": "lower",
+        "@stylistic/unit-case": "lower",
+        "@stylistic/max-empty-lines": 1,
     }
 };
 
