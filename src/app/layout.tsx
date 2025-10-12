@@ -1,6 +1,6 @@
-import type { Metadata } from "next"
-import "./globals.css"
-import React from "react"
+import type { Metadata } from "next";
+import "./globals.css";
+import React, {JSX} from "react";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -11,7 +11,7 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>): JSX.Element {
   return (
     <html lang="en">
       <body>
