@@ -1,55 +1,28 @@
 @import url("tailwindcss");
 
 :root {
-  --background: #fff;
+  --background: #f5f6f8;
   --foreground: #171717;
+  --black: #3B434E;
+  --white: white;
+  --primary: #7653FC;
+  --red: #FC836D;
+  --green: #1DC37E;
+  --green-light: #C8F8E4;
+  --font-family: 'Noto Sans KR', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
+/*@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0A0A0A;
+    --foreground: #EDEDED;
   }
-}
+}*/
 
 body {
   display: flex;
   pointer-events: all;
   color: var(--foreground);
   background-color: var(--background);
-}
-
-.header {
-  margin: 10px;
-  padding: .5rem;
-  color: #fff;
-}
-
-.footer-link {
-  background-color: #a3a3a3;
-  font-size: 16px;
-}
-
-.container {
-  padding: 20px; /* Ошибка: unit-case (PX) + indentation (4 пробела) */
-  background-color: #fafafa; /* Ошибка: color-hex-case (FAFAFA) */
-}
-
-.main-content {
-  margin: .8em;
-  color: #ccc;
-}
-
-.sidebar {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.profile-card {
-  width: 300px; height: 100vh;
-  line-height: 1.5;
-}
-
-.item-list {
-  width: calc(100% - 20px);
+  font-family: var(--font-family);
 }
