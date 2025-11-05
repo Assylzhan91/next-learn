@@ -7,6 +7,8 @@ export default {
         "@stylistic/color-hex-case": "upper",
         "@stylistic/unit-case": "lower",
         "@stylistic/max-empty-lines": 1,
+        "no-duplicate-selectors": true,
+        "declaration-block-no-redundant-longhand-properties": true,
     }
 };
 

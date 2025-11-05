@@ -1,5 +1,6 @@
 import React, { JSX } from 'react';
 import Head from 'next/head';
+import { HTag } from '@components';
 
 export default function Home(): JSX.Element {
   return (
@@ -10,18 +11,9 @@ export default function Home(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores
-        assumenda autem beatae distinctio eaque eum excepturi, facilis ipsa modi
-        molestiae obcaecati, odit possimus praesentium quaerat quisquam ratione
-        veritatis! Adipisci aliquid animi dolor doloribus illum magni,
-        necessitatibus nemo non porro repellat rerum sed tempore. Aliquam, autem
-        beatae dolore, doloremque ducimus expedita fuga hic iure nam
-        necessitatibus numquam praesentium, quia quis quisquam recusandae
-        tempora voluptatem voluptatibus! Accusamus amet commodi consequatur
-        deleniti ea eius et fuga fugiat fugit, laborum obcaecati officia qui
-        quis sit tempore? Ex, quibusdam, voluptate. Dignissimos dolorum expedita
-        maxime veritatis voluptatum! Cum delectus est laborum maxime
-        perspiciatis reiciendis unde voluptas.
+        <HTag tag={'h1'}>this is h1 tag</HTag>
+        <HTag tag={'h2'}>this is h2 tag</HTag>
+        <HTag tag={'h3'}>this is h3 tag</HTag>
       </div>
     </>
   );
