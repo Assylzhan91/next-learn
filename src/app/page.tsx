@@ -11,11 +11,13 @@ export default function Home(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Button appearance="ghost" className={'adasd'}>
+        <Button arrow={'down'} appearance="ghost" className={'adasd'}>
           ghost
         </Button>
-        <Button>default</Button>
-        <Button appearance={'primary'}>primary</Button>
+        <Button arrow={'right'}>default</Button>
+        <Button arrow={'down'} appearance={'primary'}>
+          primary
+        </Button>
       </div>
       <div>
         <HTag tag={'h1'}>this is h1 tag</HTag>

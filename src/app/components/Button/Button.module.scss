@@ -8,6 +8,7 @@
   border-radius: 5px;
   font-size: 14px;
   transition: background-color 0.3s ease;
+  position: relative;
 }
 
 .primary {
@@ -16,6 +17,10 @@
 
   &:hover {
     background-color: var(--primary-hover);
+  }
+
+  svg {
+    fill: var(--white);
   }
 }
 
@@ -27,5 +32,19 @@
   &:hover {
     color: var(--white);
     background-color: var(--primary);
+
+    svg {
+      fill: var(--white);
+    }
   }
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.down {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
 }
