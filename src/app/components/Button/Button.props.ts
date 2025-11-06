@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
-export interface ButtonProps {
+export interface ButtonProps
+  extends DetailedHTMLProps<
+    ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  > {
   appearance?: 'primary' | 'ghost';
   children?: React.ReactNode;
 }

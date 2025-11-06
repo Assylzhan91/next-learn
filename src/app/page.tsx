@@ -11,7 +11,9 @@ export default function Home(): JSX.Element {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <Button appearance="ghost">ghost</Button>
+        <Button appearance="ghost" className={'adasd'}>
+          ghost
+        </Button>
         <Button>default</Button>
         <Button appearance={'primary'}>primary</Button>
       </div>
