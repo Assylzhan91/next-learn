@@ -1,7 +1,7 @@
 import React, { JSX } from 'react';
 
-import { IHTagProps } from '@/app/components/HTag/HTag.props';
-import styles from './HTag.module.css';
+import { IHTagProps } from './HTag.props';
+import styles from './HTag.module.scss';
 
 export const HTag = ({ tag, children }: IHTagProps): JSX.Element => {
   switch (tag) {
