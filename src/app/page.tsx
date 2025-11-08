@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 import Head from 'next/head';
-import { HTag, Button, P } from '@components';
+import { HTag, Button, P, Tag } from '@components';
 
 export default function Home(): JSX.Element {
   return (
@@ -37,6 +37,25 @@ export default function Home(): JSX.Element {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste,
           veniam?
         </P>
+      </div>
+
+      <div>
+        <Tag color="primary">Lorem ipsum dolor sit.</Tag>
+        <Tag size="m" color="red">
+          Lorem ipsum dolor sit.
+        </Tag>
+        <Tag size="s" color="grey">
+          Lorem ipsum dolor sit.
+        </Tag>
+        <Tag size="s" color="green">
+          Lorem ipsum dolor sit.
+        </Tag>
+        <Tag href="asdasdasdasd" size="s" color="green">
+          Lorem ipsum dolor sit.
+        </Tag>
+        <Tag size="m" color="primary">
+          Lorem ipsum dolor sit.
+        </Tag>
       </div>
     </>
   );

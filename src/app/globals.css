@@ -16,14 +16,10 @@
 }
 
 body {
-  display: flex;
   pointer-events: all;
   color: var(--foreground);
   background-color: var(--background);
   font-family: var(--font-family);
-
-.absolute {
-  position: absolute;}
 }
 
 .right-0{
