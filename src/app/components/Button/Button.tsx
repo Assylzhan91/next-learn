@@ -19,7 +19,7 @@ export const Button = ({
       {children}
       {arrow !== 'none' && (
         <span className={classArrow}>
-          <Arrow width={10} height={10} />
+          <Arrow width={10} height={10} fill="red" />
         </span>
       )}
     </button>
