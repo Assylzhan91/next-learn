@@ -1,10 +1,16 @@
-import React, { JSX } from 'react';
+'use client';
+
+import React, { JSX, useState } from 'react';
 import Head from 'next/head';
-import { HTag, Button, P, Tag } from '@components';
+import { HTag, Button, P, Tag, Rating } from '@components';
 
 export default function Home(): JSX.Element {
+  const [rating, setRating] = useState<number>(4);
+
   return (
     <>
+      <Rating rating={rating} isEditable={true} setRating={setRating}></Rating>
+      <Rating rating={4}></Rating>
       <Head>
         <title>My Custom Page Title</title>
         <meta name="description" content="A description for my page." />
