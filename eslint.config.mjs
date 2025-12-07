@@ -32,6 +32,12 @@ const eslintConfig = [
     rules: {
       "semi": "off",
       "@/semi": ["error", "always"],
+      "@typescript-eslint/no-empty-object-type": [
+        "error",
+        {
+          "allowInterfaces": "with-single-extends"
+        }
+      ],
       "@typescript-eslint/no-empty-interface": [
           "error",
         {

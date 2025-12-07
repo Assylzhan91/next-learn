@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import React, { JSX } from 'react';
 import { Noto_Sans_KR } from 'next/font/google';
+import { Header, Footer, Sidebar } from '@components';
 
 const notoSans = Noto_Sans_KR({
   subsets: ['latin', 'cyrillic'],
@@ -21,7 +22,13 @@ export default function RootLayout({
 }>): JSX.Element {
   return (
     <html lang="ru">
-      <body className={`${notoSans.variable} font-sans`}>{children}</body>
+      <body className={`${notoSans.variable} font-sans`}>
+        <Header></Header>
+        <Sidebar></Sidebar>
+        <div>{children}</div>
+        {}
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
