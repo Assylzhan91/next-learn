@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './globals.scss';
+import styles from './Layout.module.scss';
 import React, { JSX } from 'react';
 import { Noto_Sans_KR } from 'next/font/google';
 import { Header, Footer, Sidebar } from '@components';
@@ -23,11 +24,12 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${notoSans.variable} font-sans`}>
-        <Header></Header>
-        <Sidebar></Sidebar>
-        <div>{children}</div>
-        {}
-        <Footer></Footer>
+        <div className={styles.wrapper}>
+          <Header className={styles.header} />
+          <Sidebar className={styles.sidebar} />
+          <div className={styles.body}>{children}</div>
+          <Footer className={styles.footer} />
+        </div>
       </body>
     </html>
   );
