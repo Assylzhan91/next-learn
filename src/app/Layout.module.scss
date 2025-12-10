@@ -2,6 +2,7 @@
   display: grid;
   grid-template: ". header header ." auto ". sidebar body ." 1fr "footer footer footer footer" auto / auto 230px minmax(320px, 1200px) auto;
   min-height: 100vh;
+  gap: 0 30px;
 }
 
 .header {
@@ -21,7 +22,7 @@
   grid-area: footer;
 }
 
-@media (width <= 756px ) {
+@media (width <= 765px ) {
   .wrapper {
     grid-template-columns: minmax(320px, 1fr);
     grid-template-areas:
