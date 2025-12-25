@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.scss';
-import styles from './Layout.module.scss';
+import styles from './page.module.scss';
 import React, { JSX } from 'react';
 import { Noto_Sans_KR } from 'next/font/google';
 import { Header, Footer, Sidebar } from '@components';

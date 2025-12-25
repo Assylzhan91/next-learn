@@ -1,9 +1,10 @@
 import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  eslint: {
-    dirs: ['pages', 'utils'],
-  },
+const nextConfig: NextConfig & {
+  eslint?: {
+    dirs?: string[];
+  };
+} = {
   turbopack: {
     rules: {
       '*.svg': {

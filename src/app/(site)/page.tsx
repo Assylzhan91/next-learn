@@ -1,9 +1,20 @@
-'use client';
-import React, { JSX, useState } from 'react';
-import styles from './Layout.module.scss';
+import React, { JSX } from 'react';
+import { Metadata } from 'next';
+import styles from './page.module.scss';
 
-export default function Home(): JSX.Element {
-  const [rating, setRating] = useState<number>(4);
+import { Menu } from '@/app/(site)/components/menu';
 
-  return <main className={styles.main}>Main page</main>;
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Computed Metadata',
+  };
+}
+
+export default async function Home(): Promise<JSX.Element> {
+  return (
+    <main className={styles.main}>
+      Main page
+      <Menu />
+    </main>
+  );
 }
