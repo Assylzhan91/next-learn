@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import {notFound} from 'next/navigation';
 import React, { JSX } from 'react';
 import { HTag } from '@components';
-import { getPage } from '../../../../../api/page';
+import { getPage, getMenu } from '@api';
 
 export const metadata = { title: 'PageProducts' };
 
@@ -12,7 +12,12 @@ interface IPageProducts {
   }
 }
 
-export default async function Products({ params }: IPageProducts): Promise<JSX.Element>  {
+export async function generateStaticParams(): Promise<IPageProducts['params'][]> {
+  const menu = await getMenu(0);
+  return menu.flatMap(item => item.pages.map(page => ({alias: page.alias })))
+}
+
+export default async function PageProducts({ params }: IPageProducts): Promise<JSX.Element>  {
   const { alias } = await params;
   const page = await getPage(alias);
   if (!page) return notFound();
