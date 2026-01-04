@@ -12,6 +12,7 @@ interface IPageProducts {
 
 export default async function Products({ params }: IPageProducts): Promise<JSX.Element>  {
   const { alias } = await params;
+  console.log(1);
   return (
     <div>
     <HTag tag="h1">PageProducts</HTag>
