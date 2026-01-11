@@ -4,9 +4,12 @@ import { API } from '@/app/(site)/api';
 import { TopPageModel } from '../interfaces/page.interface';
 
 export async function getPage(alias: string): Promise<TopPageModel | null> {
-  const res = await fetch(API.topPage.byAlias + alias);
-  if (!res.ok) {
+  try {
+    const res = await fetch(API.topPage.byAlias + alias, {
+      next: { revalidate: 10 }
+    });
+    return res.json();
+  }catch(e){
     return null;
   }
-  return res.json();
 }

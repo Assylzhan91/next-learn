@@ -11,6 +11,7 @@ export async function getMenu(firstCategory: number): Promise<MenuItem[]> {
     headers: {
       'content-type': 'application/json',
     },
+    next: { revalidate: 10 }
   });
   return res.json();
 }
