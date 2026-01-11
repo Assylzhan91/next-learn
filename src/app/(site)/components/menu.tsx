@@ -1,6 +1,6 @@
 import React, { JSX } from 'react';
 
-import { getMenu } from '../../../../api/menu';
+import { getMenu } from '@api';
 
 export async function Menu(): Promise<JSX.Element> {
   const menu = await getMenu(0);

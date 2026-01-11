@@ -13,7 +13,7 @@ interface IPageProducts {
 }
 
 export async function generateStaticParams(): Promise<IPageProducts['params'][]> {
-  const menu = await getMenu(0);
+  const menu = await getMenu(0, true);
   return menu.flatMap(item => item.pages.map(page => ({alias: page.alias })))
 }
 
