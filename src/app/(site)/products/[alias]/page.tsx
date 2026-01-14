@@ -1,20 +1,16 @@
-import type { Metadata } from 'next';
 import {notFound} from 'next/navigation';
+import type { Metadata } from 'next';
 import React, { JSX } from 'react';
-import { HTag } from '@components';
+
+import { IPageProducts } from '@interfaces/page.interface';
 import { getPage, getMenu } from '@api';
+import { HTag } from '@components';
 
 export const metadata = { title: 'PageProducts' };
 
-interface IPageProducts {
-  params: {
-    alias: string
-  }
-}
-
 export async function generateStaticParams(): Promise<IPageProducts['params'][]> {
   const menu = await getMenu(0, true);
-  return menu.flatMap(item => item.pages.map(page => ({alias: page.alias })))
+  return menu?.flatMap(item => item.pages.map(page => ({alias: page.alias }))) || []
 }
 
 export default async function PageProducts({ params }: IPageProducts): Promise<JSX.Element>  {

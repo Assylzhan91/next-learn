@@ -37,3 +37,9 @@ export interface TopPageModel {
   updatedAt: Date;
   hh?: HhData;
 }
+
+export interface IPageProducts {
+  params: {
+    alias: string
+  }
+}
